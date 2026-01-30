@@ -1,0 +1,157 @@
+/* PAGE BACKGROUND */
+.result-container {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* GREEN HEADER BAR */
+.result-header-bar {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* DOWNLOAD BUTTON */
+.download-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* MAIN CARD WITH BORDER + SHADOW */
+.semester-card {
+  background: white;
+  border: 3px solid #000;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* SEMESTER DROPDOWN */
+.result-controls {
+  margin-bottom: 20px;
+}
+
+.result-controls label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.result-controls select {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 80px;
+}
+
+/* STUDENT INFO */
+.student-info {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.student-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* TABLE WRAPPER */
+.result-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.result-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.result-table th,
+.result-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.result-table thead tr {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+.result-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.result-table tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* STATUS COLORS */
+.result-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-weight: 600;
+  min-width: 60px;
+  text-align: center;
+}
+
+.result-pass {
+  background-color: #4caf50;
+  color: white;
+}
+
+.result-fail {
+  background-color: #e53935;
+  color: white;
+}
+
+/* OVERALL RESULT */
+.overall-result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.overall-status {
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+
+.overall-status.result-pass {
+    background-color: #4caf50;
+}
+
+.overall-status.result-fail {
+    background-color: #e53935;
+}

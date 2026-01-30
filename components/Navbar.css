@@ -1,0 +1,224 @@
+/* Navbar main container */
+.dashboard-container .navbar {
+  display: flex;
+  flex-direction: row;
+  background: #3c8ebd;
+  color: white;
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* contain: paint;
+  backface-visibility: hidden;
+  transform: translateZ(0); */
+}
+
+/* Left section */
+.dashboard-container .navbar-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.dashboard-container .navbar-left h3 {
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 350px;
+}
+
+.dashboard-container .navbar .hamburger-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.dashboard-container .navbar .hamburger-icon:hover {
+  background-color: #367ea8;
+}
+
+.dashboard-container .navbar .logo {
+  width: 160px;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
+}
+
+/* Right section */
+.dashboard-container .navbar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.dashboard-container .navbar .grievance {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s;
+}
+
+.dashboard-container .navbar .grievance:hover {
+  background: #367ea8;
+}
+
+.dashboard-container .navbar .notification-icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.dashboard-container .navbar .notification-icon:hover {
+  background-color: #367ea8;
+}
+
+/* Profile */
+.dashboard-container .navbar .profile-container {
+  position: relative;
+}
+
+.dashboard-container .navbar .profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.dashboard-container .navbar .profile:hover {
+  background-color: #367ea8;
+}
+
+.dashboard-container .navbar .profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dashboard-container .navbar .profile-name {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.dashboard-container .navbar .dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.2s;
+}
+
+.dashboard-container .navbar .dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown */
+.dashboard-container .navbar .profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 15rem;
+  margin-top: 4px;
+  z-index: 1200; 
+}
+
+/* ================= RESPONSIVE BREAKPOINTS ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .dashboard-container .navbar-left h3 {
+    font-size: 16px;
+    max-width: 250px;
+  }
+  .dashboard-container .navbar .logo {
+    width: 140px;
+  }
+  .dashboard-container .navbar-right {
+    gap: 12px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .dashboard-container .navbar {
+    height: auto;
+    padding: 6px 10px;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-container .navbar-left h3 {
+    display: none; 
+  }
+
+  .dashboard-container .navbar .logo {
+    width: 120px;
+  }
+
+  .dashboard-container .navbar-right {
+    gap: 10px;
+  }
+
+  .dashboard-container .navbar .profile-name {
+    display: none;
+  }
+}
+
+/* Small Mobiles */
+@media (max-width: 480px) {
+  .dashboard-container .navbar {
+    justify-content: space-between;
+  }
+
+  .dashboard-container .navbar .logo {
+    width: 100px;
+  }
+
+  .dashboard-container .navbar-right {
+    gap: 8px;
+  }
+
+  .dashboard-container .navbar .notification-icon {
+    font-size: 1.1rem;
+    padding: 4px;
+  }
+
+  .dashboard-container .navbar .profile-pic {
+    width: 28px;
+    height: 28px;
+  }
+
+  .dashboard-container .navbar .profile-dropdown {
+    width: 12rem;
+  }
+}
