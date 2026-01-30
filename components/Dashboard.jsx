@@ -114,11 +114,7 @@ const ExamScheduleCard = () => (
   </Card>
 );
 
-const ResultCard = () => {
-  const openResultWindow = () => {
-    window.open('/result', 'resultWindow', 'width=800,height=600,scrollbars=yes');
-  };
-
+const ResultCard = ({ studentData }) => {
   return (
     <Card title="Result" color="card-red">
       <div className="card-content">
@@ -128,10 +124,9 @@ const ResultCard = () => {
           <br />
         </div>
         <div className="card-bottom-bar card-footer-red">
-          <a href="/result" onClick={(e) => { e.preventDefault(); openResultWindow(); }}>
-            More Info
-            <FaArrowCircleRight />
-          </a>
+          <Link to={`/result?regdNo=${studentData?.regdNo || ''}`} className="card-link">
+            More Info <FaArrowCircleRight />
+          </Link>
         </div>
       </div>
     </Card>
@@ -414,7 +409,7 @@ const Dashboard = () => {
             <TimeTableCard />
             <AttendanceCard studentData={currentStudent} />
             <ExamScheduleCard />
-            <ResultCard />
+            <ResultCard studentData={currentStudent} />
             <LibraryCard />
             <HostelCard />
             <DuesCard studentData={currentStudent} />
